@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+    <from ng-app="myApp" ng-controller="empCtrl">
+        <table>
+            <tr>
+                <td>ID:</td>
+                <td><input type="text" ng-model="id" /></td>
+            </tr>
+            <tr>
+                <td>姓名:</td>
+                <td><input type="text" ng-model="name" /></td>
+            </tr>
+            <tr>
+                <td>desg:</td>
+                <td>
+                <input type='text' ng-model="desg" /></td>
+            </tr>
+            <tr>
+                <td><button ng-click="btnclk()">save</button></td>
+                <td><button ng-click="btnupd(id,name,desg)">update</button></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr><td>id</td><td>姓名</td><td>desg</td><td></td></tr>
+            <tr ng-repeat="x in emparr">
+                <td ><span ng-bind="x.arr_id"></span></td>
+                <td><span ng-bind="x.arr_name"></span></td> 
+                <td><span ng-bind="x.arr_desg"></span></td>
+                <td><button ng-click="edit(x,$index)">edit</button></td>
+                <td><button ng-click="del(x)">delete</button></td>
+            </tr>
+        </table>
+    </from>
+</body>
+<script type="text/javascript">
+        var app=angular.module('myApp',[]);
+        app.controller('empCtrl',function($scope){
+            $scope.emparr=[];
+
+            //添加
+            $scope.btnclk=function(){
+                $scope.emparr.push({'arr_id':$scope.id,'arr_name':$scope.name,'arr_desg':$scope.desg});
+                $scope.id='';
+                $scope.name='';
+                $scope.desg='';
+            }
+            var key='';
+            //编辑
+            $scope.edit=function(emp,indx){
+                key=indx;
+                console.log(indx);
+                console.log(emp);
+                $scope.id=emp.arr_id;
+                $scope.name=emp.arr_name;
+                $scope.desg=emp.arr_desg;
+            }
+            //修改
+            $scope.btnupd=function(id,name,desg){
+                $scope.emparr[key].arr_id=id;
+                $scope.emparr[key].arr_name=name;
+                $scope.emparr[key].arr_desg=desg;
+
+                $scope.id='';
+                $scope.name='';
+                $scope.desg='';
+            }
+
+            $scope.del=function(id){
+                $scope.emparr.splice(id,1);
+            }
+        });
+    </script>
+</html>
