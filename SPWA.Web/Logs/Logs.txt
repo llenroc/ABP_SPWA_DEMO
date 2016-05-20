@@ -1,0 +1,23 @@
+DEBUG 2016-05-19 17:02:19,964 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-05-19 17:02:22,015 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2016-05-19 17:02:22,017 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.9.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.9.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.9.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=0.9.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Owin.AbpOwinModule, Abp.Owin, Version=0.9.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.9.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.9.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.9.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.9.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.9.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.9.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPWA.SPWAApplicationModule, SPWA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,020 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPWA.SPWACoreModule, SPWA.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,020 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPWA.SPWADataModule, SPWA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,020 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPWA.Web.SPWAWebModule, SPWA.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,020 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPWA.Api.SPWAWebApiModule, SPWA.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-05-19 17:02:22,023 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2016-05-19 17:02:22,146 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-05-19 17:02:22,146 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-05-19 17:02:22,146 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-05-19 17:02:22,146 [1    ] o.Configuration.LanguageManagementConfig - Converted SPWA (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
