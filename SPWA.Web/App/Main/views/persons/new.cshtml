@@ -1,0 +1,13 @@
+﻿<div ng-controller="spwa.views.person.new as vm">
+    <form id="NewTaskForm" role="form" name="newTaskForm" novalidate>
+        <div class="form-group">
+            <label for="PersonName">@L("PersonName")</label>
+            <input id="PersonName" type="text" ng-model="vm.person.name" class="form-control" @*placeholder="@L("EnterDescriptionHere")"*@ required />
+        </div>
+        <div class="form-group">
+            <label for="PersonAge">@L("PersonAge")</label>
+            <input id="PersonAge" type="text" class="form-control" ng-model="vm.person.age"/>
+        </div>
+        <button ng-click="vm.saveTask()" ng-disabled="newTaskForm.$invalid" type="submit" class="btn btn-primary">@L("CreateTheTask")</button>
+    </form>
+</div>

@@ -21,5 +21,8 @@
 
     <text name="LoginFailed" value="登录失败!" />
     
-  </texts>
+    <text name="PersonList" value="人员列表" />
+    <text name="Xpersons" value="{0}个人员" />
+    <text name="Persons" value="人员列表" />
+ </texts>
 </localizationDictionary>

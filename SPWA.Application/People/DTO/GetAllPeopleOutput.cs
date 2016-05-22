@@ -5,6 +5,6 @@ namespace SPWA.People.DTO
 {
     public class GetAllPeopleOutput : IOutputDto//todo:基类
     {
-        public List<PersonDto> People { get; set; }
+        public List<PersonDto> Persons { get; set; }
     }
 }

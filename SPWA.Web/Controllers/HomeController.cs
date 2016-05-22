@@ -17,7 +17,7 @@ namespace SPWA.Web.Controllers
         public ActionResult Index()
         {
             //获取列表
-            var p = _personService.GetPersons();
+            //var p = _personService.GetPersons();
             return View("~/App/Main/views/layout/layout.cshtml"); //Layout of the angular application.
         }
 	}

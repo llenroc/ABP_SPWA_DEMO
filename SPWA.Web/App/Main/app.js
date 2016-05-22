@@ -37,7 +37,12 @@
                     });
                 $urlRouterProvider.otherwise('/tenants');
             }
-
+            $stateProvider.state('persons', {
+                url: '/persons',
+                templateUrl: '/App/Main/views/persons/index.cshtml',
+                menu: 'Persons' //Matches to name of 'Persons' menu in SPWANavigationProvider
+            });
+            $urlRouterProvider.otherwise('/persons');
             $stateProvider
                 .state('home', {
                     url: '/',
@@ -49,6 +54,7 @@
                     templateUrl: '/App/Main/views/about/about.cshtml',
                     menu: 'About' //Matches to name of 'About' menu in SPWANavigationProvider
                 });
+            
         }
     ]);
 })();

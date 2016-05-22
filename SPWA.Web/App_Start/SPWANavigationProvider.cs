@@ -40,6 +40,14 @@ namespace SPWA.Web
                         )
                 ).AddItem(
                     new MenuItemDefinition(
+                        "Persons",
+                        L("PersonList"),
+                        url: "#persons",
+                        icon: "fa fa-users"//,
+                        //requiredPermissionName: PermissionNames.Pages_Users//todo:djy                      
+                        )
+                ).AddItem(
+                    new MenuItemDefinition(
                         "About",
                         new LocalizableString("About", SPWAConsts.LocalizationSourceName),
                         url: "#/about",

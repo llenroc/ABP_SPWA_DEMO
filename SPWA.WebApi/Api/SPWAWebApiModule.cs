@@ -5,6 +5,8 @@ using Abp.Configuration.Startup;
 using Abp.Modules;
 using Abp.WebApi;
 using Abp.WebApi.Controllers.Dynamic.Builders;
+using Swashbuckle.Application;
+using System.Linq;
 
 namespace SPWA.Api
 {
@@ -18,8 +20,18 @@ namespace SPWA.Api
             DynamicApiControllerBuilder
                 .ForAll<IApplicationService>(typeof(SPWAApplicationModule).Assembly, "app")
                 .Build();
-
             Configuration.Modules.AbpWebApi().HttpConfiguration.Filters.Add(new HostAuthenticationFilter("Bearer"));
+            ConfigureSwaggerUi();
+        }
+        private void ConfigureSwaggerUi()
+        {
+            Configuration.Modules.AbpWebApi().HttpConfiguration
+                .EnableSwagger(c =>
+                {
+                    c.SingleApiVersion("v1", "SPWA.Api");
+                    c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+                })
+                .EnableSwaggerUi();
         }
     }
 }

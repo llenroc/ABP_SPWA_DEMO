@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Abp.Application.Services;
 using AutoMapper;
 using SPWA.People.DTO;
@@ -18,14 +19,35 @@ namespace SPWA.People
             _personRepository = personRepository;
         }
 
+        public void AddPerson(PersonDto personDto)
+        {
+            Person person= Mapper.Map<Person>(personDto);
+            _personRepository.Insert(person);            
+        }
+
+        public void DeletePerson(PersonDto personDto)
+        {
+            throw new NotImplementedException();
+        }
+
         public GetAllPeopleOutput GetPersons()
         {
             var persons = _personRepository.GetPersons();
             //用AutoMapper自动将List<Peopson>转换成List<PeopsonDto>
             return new GetAllPeopleOutput
             {
-                People = Mapper.Map<List<PersonDto>>(persons)
+                Persons = Mapper.Map<List<PersonDto>>(persons)
             };
+        }
+
+        public void UpdatePerson(PersonDto personDto)
+        {
+            Person person = _personRepository.Get(personDto.Id);
+            person.Age = personDto.Age;
+            person.Name = personDto.Name;
+            _personRepository.Update(person);
+
+            //_personRepository.Update(personDto.Id, p => { p.Age = personDto.Age; p.Name = personDto.Name; });
         }
     }
 }

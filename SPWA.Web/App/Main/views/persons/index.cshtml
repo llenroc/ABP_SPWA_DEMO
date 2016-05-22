@@ -1,0 +1,30 @@
+﻿<li class="panel panel-default" ng-controller="spwa.views.persons.index as vm">
+
+    <div class="panel-heading" style="position: relative;">
+        <div class="row">
+
+            <!-- Title -->
+            <h3 class="panel-title col-xs-6">
+                @L("PersonList") - <span>{{vm.getPersonCountText()}}</span>
+            </h3>
+        </div>
+    </div>
+
+    <!-- Task list -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>@*@L("EmailAddress")*@
+                <th>Name</th>
+                <th>年龄</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="person in vm.persons">
+                <td>{{person.id}}</td>
+                <td>{{person.name}}</td>
+                <td>{{person.age}}</td>                
+        </tbody>
+    </table> 
+</div>
