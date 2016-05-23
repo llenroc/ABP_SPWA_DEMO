@@ -307,6 +307,7 @@
     <Content Include="App\Main\views\home\home.js" />
     <Content Include="App\Main\views\about\about.js" />
     <Content Include="App\Main\views\persons\index.js" />
+    <Content Include="App\Main\views\persons\new.js" />
     <Content Include="App\Main\views\users\createModal.js" />
     <Content Include="App\Main\views\users\index.js" />
     <Content Include="App\Main\views\tenants\createModal.js" />

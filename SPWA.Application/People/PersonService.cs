@@ -21,7 +21,8 @@ namespace SPWA.People
 
         public void AddPerson(PersonDto personDto)
         {
-            Person person= Mapper.Map<Person>(personDto);
+            Mapper.CreateMap<PersonDto,Person >();
+            Person person= Mapper.Map<PersonDto,Person >(personDto);
             _personRepository.Insert(person);            
         }
 

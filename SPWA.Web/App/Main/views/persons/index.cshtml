@@ -11,20 +11,24 @@
     </div>
 
     <!-- Task list -->
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>@*@L("EmailAddress")*@
-                <th>Name</th>
-                <th>年龄</th>
-               
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="person in vm.persons">
-                <td>{{person.id}}</td>
-                <td>{{person.name}}</td>
-                <td>{{person.age}}</td>                
-        </tbody>
-    </table> 
-</div>
+    <div class="row">
+        <div class="col-md-12">
+            <button ng-click="vm.openAddPersonModal()" class="btn btn-primary pull-right"><i class="fa fa-plus"></i>添加人员</button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>@*@L("PersonID")*@
+                        <th>Name</th>
+                        <th>年龄</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="person in vm.persons">
+                        <td>{{person.id}}</td>
+                        <td>{{person.name}}</td>
+                        <td>{{person.age}}</td>
+                </tbody>
+            </table>
+        </div>
+    </div>
